@@ -6,6 +6,7 @@ Morse::Morse(int pin) {
 }
 
 void Morse::sendMessage(String text) {
+  //iterate through the string one char at a time, calling convertToMorse at each iteration to convert char to a combination of dots and dashes.
   for (int i = 0; i < text.length(); i++) {
     char c = text[i];
     String morseCode = convertToMorse(c);
